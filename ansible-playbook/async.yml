@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  become: yes
+  tasks: 
+   - name: Run sleep.sh
+     command: /home/ansadm/sleep.sh
+     async: 60
+     poll: 0

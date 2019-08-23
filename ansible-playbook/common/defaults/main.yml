@@ -1,0 +1,4 @@
+---
+# defaults file for /home/ansadm/common
+
+httpd_log_level: error

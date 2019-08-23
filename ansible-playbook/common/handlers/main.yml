@@ -1,0 +1,7 @@
+---
+# handlers file for /home/ansadm/common
+- name: restart httpd service
+  service:
+    name: httpd
+    state: restarted
+  listen: httpd service

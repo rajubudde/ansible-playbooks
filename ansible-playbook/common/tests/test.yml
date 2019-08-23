@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  remote_user: ansadm
+  become: yes
+#  roles:
+#   - /home/ansadm/common
+  tasks: 
+    - name: I ran
+      debug:
+        msg: "I ran!"
+    - name: use role
+      include_role:
+         name: /home/ansadm/common
+ 

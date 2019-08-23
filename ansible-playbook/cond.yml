@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  vars: 
+    target_file: /home/ansadm/hostname
+  tasks:
+    - name: gather file Distribution
+      stat: 
+        path: "{{ target_file }}"
+      register: hostname
+    - name: Rename hostname when found
+      command: mv "{{ target_file }}" /home/ansadm/net-info
+      when: hostname.stat.exists

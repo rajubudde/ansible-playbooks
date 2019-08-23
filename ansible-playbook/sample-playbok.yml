@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  become: yes
+  tasks:
+   - name: install latest nginx latest version
+     yum: name=nginx state=latest
+   
